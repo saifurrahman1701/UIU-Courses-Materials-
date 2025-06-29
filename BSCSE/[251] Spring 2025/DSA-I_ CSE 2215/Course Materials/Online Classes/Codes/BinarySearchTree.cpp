@@ -52,6 +52,22 @@ void inorder(struct Node *cur = root) {
     inorder(cur->right);
 }
 
+void search(int value) {
+    struct Node *temp = root;
+    while(temp!=NULL) {
+        if(temp->value == value) {
+            printf("found\n");
+            return;
+        }
+        if(value < temp->value) {
+            temp = temp->left;
+        }
+        else {
+            temp = temp->right;
+        }
+    }
+}
+
 int main() {
     insert(44);
     insert(17);
@@ -67,5 +83,7 @@ int main() {
     insert(80);
 
     inorder();
+
+    search(82);
 
 }
