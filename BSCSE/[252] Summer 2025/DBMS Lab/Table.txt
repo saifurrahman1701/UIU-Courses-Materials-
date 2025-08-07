@@ -1,0 +1,74 @@
+-- Create the Employee table
+CREATE TABLE Employee (
+    emp_id INT UNIQUE,                     -- Unique employee ID, must be unique
+    first_name VARCHAR(50) NOT NULL,       -- Employee's first name, cannot be NULL
+    last_name VARCHAR(50) NOT NULL,        -- Employee's last name, cannot be NULL
+    email VARCHAR(100) UNIQUE,             -- Employee's email, must be unique
+    phone_number VARCHAR(20),              -- Employee's phone number
+    hire_date DATE NOT NULL,               -- Date when the employee was hired, cannot be NULL
+    job_title VARCHAR(50),                 -- Employee's job title
+    salary DECIMAL(10, 2) NOT NULL,        -- Employee's salary, precise decimal with 2 decimal places, cannot be NULL
+    department_id INT                      -- ID of the department the employee belongs to
+);
+
+-- Insert 20 sample data records into the Employee table
+
+INSERT INTO Employee (emp_id, first_name, last_name, email, phone_number, hire_date, job_title, salary, department_id) VALUES
+(1, 'John', 'Doe', 'john.doe@example.com', '123-456-7890', '2020-01-15', 'Software Engineer', 75000.00, 101);
+
+INSERT INTO Employee (emp_id, first_name, last_name, email, phone_number, hire_date, job_title, salary, department_id) VALUES
+(2, 'Jane', 'Smith', 'jane.smith@example.com', '987-654-3210', '2019-03-20', 'Project Manager', 90000.00, 102);
+
+INSERT INTO Employee (emp_id, first_name, last_name, email, phone_number, hire_date, job_title, salary, department_id) VALUES
+(3, 'Peter', 'Jones', 'peter.jones@example.com', '555-123-4567', '2021-07-01', 'Data Analyst', 60000.00, 103);
+
+INSERT INTO Employee (emp_id, first_name, last_name, email, phone_number, hire_date, job_title, salary, department_id) VALUES
+(4, 'Alice', 'Williams', 'alice.williams@example.com', '111-222-3333', '2018-09-10', 'HR Specialist', 65000.00, 104);
+
+INSERT INTO Employee (emp_id, first_name, last_name, email, phone_number, hire_date, job_title, salary, department_id) VALUES
+(5, 'Bob', 'Brown', 'bob.brown@example.com', '444-555-6666', '2022-02-28', 'Marketing Coordinator', 50000.00, 105);
+
+INSERT INTO Employee (emp_id, first_name, last_name, email, phone_number, hire_date, job_title, salary, department_id) VALUES
+(6, 'Charlie', 'Davis', 'charlie.davis@example.com', '777-888-9999', '2017-06-05', 'Senior Developer', 95000.00, 101);
+
+INSERT INTO Employee (emp_id, first_name, last_name, email, phone_number, hire_date, job_title, salary, department_id) VALUES
+(7, 'Diana', 'Miller', 'diana.miller@example.com', '222-333-4444', '2020-11-12', 'Business Analyst', 70000.00, 102);
+
+INSERT INTO Employee (emp_id, first_name, last_name, email, phone_number, hire_date, job_title, salary, department_id) VALUES
+(8, 'Ethan', 'Wilson', 'ethan.wilson@example.com', '666-777-8888', '2016-04-01', 'Lead Engineer', 110000.00, 101);
+
+INSERT INTO Employee (emp_id, first_name, last_name, email, phone_number, hire_date, job_title, salary, department_id) VALUES
+(9, 'Fiona', 'Moore', 'fiona.moore@example.com', '333-444-5555', '2023-01-25', 'UX Designer', 72000.00, 103);
+
+INSERT INTO Employee (emp_id, first_name, last_name, email, phone_number, hire_date, job_title, salary, department_id) VALUES
+(10, 'George', 'Taylor', 'george.taylor@example.com', '999-000-1111', '2019-08-18', 'Financial Analyst', 80000.00, 106);
+
+INSERT INTO Employee (emp_id, first_name, last_name, email, phone_number, hire_date, job_title, salary, department_id) VALUES
+(11, 'Hannah', 'Anderson', 'hannah.anderson@example.com', '123-987-6543', '2022-05-01', 'Recruiter', 58000.00, 104);
+
+INSERT INTO Employee (emp_id, first_name, last_name, email, phone_number, hire_date, job_title, salary, department_id) VALUES
+(12, 'Ian', 'Thomas', 'ian.thomas@example.com', '456-789-0123', '2018-10-01', 'Marketing Manager', 85000.00, 105);
+
+INSERT INTO Employee (emp_id, first_name, last_name, email, phone_number, hire_date, job_title, salary, department_id) VALUES
+(13, 'Julia', 'Jackson', 'julia.jackson@example.com', '789-012-3456', '2021-03-15', 'QA Engineer', 68000.00, 101);
+
+INSERT INTO Employee (emp_id, first_name, last_name, email, phone_number, hire_date, job_title, salary, department_id) VALUES
+(14, 'Kevin', 'White', 'kevin.white@example.com', '012-345-6789', '2017-12-01', 'Operations Manager', 92000.00, 107);
+
+INSERT INTO Employee (emp_id, first_name, last_name, email, phone_number, hire_date, job_title, salary, department_id) VALUES
+(15, 'Laura', 'Harris', 'laura.harris@example.com', '345-678-9012', '2020-09-20', 'Product Owner', 100000.00, 102);
+
+INSERT INTO Employee (emp_id, first_name, last_name, email, phone_number, hire_date, job_title, salary, department_id) VALUES
+(16, 'Mike', 'Martin', 'mike.martin@example.com', '678-901-2345', '2016-01-01', 'CTO', 150000.00, 100); -- Assuming 100 is Executive/Management
+
+INSERT INTO Employee (emp_id, first_name, last_name, email, phone_number, hire_date, job_title, salary, department_id) VALUES
+(17, 'Nora', 'Garcia', 'nora.garcia@example.com', '901-234-5678', '2023-04-10', 'Junior Developer', 55000.00, 101);
+
+INSERT INTO Employee (emp_id, first_name, last_name, email, phone_number, hire_date, job_title, salary, department_id) VALUES
+(18, 'Oscar', 'Rodriguez', 'oscar.rodriguez@example.com', '234-567-8901', '2019-11-05', 'IT Support', 48000.00, 108);
+
+INSERT INTO Employee (emp_id, first_name, last_name, email, phone_number, hire_date, job_title, salary, department_id) VALUES
+(19, 'Paula', 'Martinez', 'paula.martinez@example.com', '567-890-1234', '2022-07-07', 'Sales Representative', 62000.00, 105);
+
+INSERT INTO Employee (emp_id, first_name, last_name, email, phone_number, hire_date, job_title, salary, department_id) VALUES
+(20, 'Quinn', 'Hernandez', 'quinn.hernandez@example.com', '890-123-4567', '2021-02-14', 'Accountant', 70000.00, 106);
